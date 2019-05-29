@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BlogPost } from '../blog-post';
+import { BlotPostTileComponent } from '../blot-post-tile/blot-post-tile.component';
 
 @Component({
   selector: 'app-blog-list',
@@ -10,6 +11,8 @@ export class BlogListComponent implements OnInit {
 
   blogPost: BlogPost[][];
   currentPage: number;
+  @ViewChild('tile') blogPostTileComponent: BlotPostTileComponent;
+  
   constructor() { }
 
   ngOnInit() {
@@ -72,5 +75,9 @@ export class BlogListComponent implements OnInit {
   updatePage(newPage){
     console.log("Event Emitted in Angular");
     this.currentPage = newPage;
+  }
+
+  expandAll(){
+    this.blogPostTileComponent.showFullSummary();
   }
 }

@@ -6,7 +6,6 @@ import { TruncatePipe } from '../truncate.pipe';
   selector: 'app-blot-post-tile',
   templateUrl: './blot-post-tile.component.html',
   styleUrls: ['./blot-post-tile.component.scss'],
-  encapsulation: ViewEncapsulation.Emulated
 })
 export class BlotPostTileComponent implements OnInit {
 
