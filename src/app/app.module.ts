@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BlotPostTileComponent } from './blot-post-tile/blot-post-tile.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { TruncatePipe } from './truncate.pipe';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlotPostTileComponent,
     BlogListComponent,
-    TruncatePipe
+    TruncatePipe,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,

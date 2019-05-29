@@ -1,3 +1,9 @@
 <app-blot-post-tile 
-*ngFor = "let post of blogPost"
-[post]="post"></app-blot-post-tile>
+    *ngFor = "let post of blogPost[currentPage]"
+    [post]="post">
+</app-blot-post-tile>
+
+<app-paginator 
+    [numberOfPages] = "blogPost.length"
+    (pageNumberClick) = "updatePage($event)">
+</app-paginator>
