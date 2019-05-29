@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { BlogPost } from '../blog-post';
 import { TruncatePipe } from '../truncate.pipe';
 
@@ -6,6 +6,7 @@ import { TruncatePipe } from '../truncate.pipe';
   selector: 'app-blot-post-tile',
   templateUrl: './blot-post-tile.component.html',
   styleUrls: ['./blot-post-tile.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlotPostTileComponent implements OnInit {
 

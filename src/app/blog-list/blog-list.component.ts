@@ -30,4 +30,14 @@ export class BlogListComponent implements OnInit {
     this.blogPostTileComponents
     .forEach(e=>e.showFullSummary());
   }
+
+  favAll(){
+    this.blogPost[this.currentPage] = 
+    this.blogPost[this.currentPage]
+      .map(post=> ({
+        title:post.title,
+        summary: post.summary,
+        isFav: true
+      }));
+  }
 }
