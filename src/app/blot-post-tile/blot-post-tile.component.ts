@@ -19,8 +19,11 @@ export class BlotPostTileComponent implements OnInit {
   }
 
   showFullSummary(){
-    this.post.summary = this.fullSummary;
-    
+    this.post.summary = this.fullSummary;  
+  }
+
+  toggleFav(){
+    this.post.isFav= !this.post.isFav;
   }
 
 }
