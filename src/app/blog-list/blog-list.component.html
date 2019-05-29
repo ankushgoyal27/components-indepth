@@ -1,1 +1,3 @@
-<app-blot-post-tile [post]="blogPost[0]"></app-blot-post-tile>
+<app-blot-post-tile 
+*ngFor = "let post of blogPost"
+[post]="post"></app-blot-post-tile>
